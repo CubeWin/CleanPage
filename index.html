@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -490,11 +491,11 @@
         >
           SERVICIOS
         </h2>
-        <div class="owl-carousel owl-theme" id="owl-servicios">
-          <div class="mx-3 item">
+        <div class="owl-carousel owl-theme position-relative" id="owl-servicios">
+          <div class="mx-3 item d-flex align-items-center justify-content-center">
             <div
               class="card d-flex align-items-center cw-card-rounded-top shadow position-relative"
-              style="min-height: 701px"
+              style="min-height: 701px; max-width: 406px"
             >
               <div
                 class="rounded-circle mt-5 cw-img-card-rounded bg-danger cw-img-cover"
@@ -520,10 +521,10 @@
               </button>
             </div>
           </div>
-          <div class="mx-3 item">
+          <div class="mx-3 item d-flex align-items-center justify-content-center">
             <div
               class="card d-flex align-items-center cw-card-rounded-top shadow position-relative"
-              style="min-height: 701px"
+              style="min-height: 701px; max-width: 406px"
             >
               <div
                 class="rounded-circle mt-5 cw-img-card-rounded bg-danger cw-img-cover"
@@ -550,10 +551,10 @@
               </button>
             </div>
           </div>
-          <div class="mx-3 item">
+          <div class="mx-3 item d-flex align-items-center justify-content-center">
             <div
               class="card d-flex align-items-center cw-card-rounded-top shadow position-relative"
-              style="min-height: 701px"
+              style="min-height: 701px; max-width: 406px"
             >
               <div
                 class="rounded-circle mt-5 cw-img-card-rounded bg-danger cw-img-cover"
@@ -579,10 +580,10 @@
               </button>
             </div>
           </div>
-          <div class="mx-3 item">
+          <div class="mx-3 item d-flex align-items-center justify-content-center">
             <div
               class="card d-flex align-items-center cw-card-rounded-top shadow position-relative"
-              style="min-height: 701px"
+              style="min-height: 701px; max-width: 406px"
             >
               <div
                 class="rounded-circle mt-5 cw-img-card-rounded bg-danger cw-img-cover"
@@ -608,10 +609,10 @@
               </button>
             </div>
           </div>
-          <div class="mx-3 item">
+          <div class="mx-3 item d-flex align-items-center justify-content-center">
             <div
               class="card d-flex align-items-center cw-card-rounded-top shadow position-relative"
-              style="min-height: 701px"
+              style="min-height: 701px; max-width: 406px"
             >
               <div
                 class="rounded-circle mt-5 cw-img-card-rounded bg-danger cw-img-cover"
@@ -714,9 +715,27 @@
               rows="10"
               style="max-height: 120px"
             ></textarea>
-            <button type="submit" class="btn btn-primary rounded-0 px-5">
-              Enviar
-            </button>
+            <div class="row">
+              <div class="col-lg-6 text-left">
+                <span class="fa-stack fa-lg text-muted">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="fa-stack fa-lg text-muted">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="fa-stack fa-lg text-muted">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </div>
+              <div class="col-lg-6">
+                <button type="submit" class="btn btn-primary rounded-0 px-5">
+                  <i class="fa fa-send"></i> Enviar
+                </button>
+              </div>
+            </div>
           </form>
         </div>
         <div class="col-lg-5">
@@ -761,9 +780,9 @@
           <div
             class="col-lg-6 d-flex align-items-center justify-content-center"
           >
-            <i>F</i>
-            <i>T</i>
-            <i>I</i>
+            <i class="fa fa-facebook fa-2x px-2 text-muted"></i>
+            <i class="fa fa-twitter fa-2x px-2 text-muted"></i>
+            <i class="fa fa-instagram fa-2x px-2 text-muted"></i>
           </div>
         </div>
       </div>
@@ -793,7 +812,9 @@
     <script src="owl.carousel.js"></script>
     <script>
       $("#owl-servicios").owlCarousel({
+        rtl:true,
         loop: true,
+    nav:true,
         autoplay: true,
         responsive: {
           0: {
@@ -808,7 +829,6 @@
         },
       });
       $("#owl-contacto").owlCarousel({
-        stagePadding: 50,
         loop: true,
         autoplay: true,
         responsive: {
