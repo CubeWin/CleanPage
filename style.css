@@ -38,12 +38,31 @@
   border-color: rgb(7, 188, 131) !important;
 }
 
+.cw-w-85{
+  width: 85%;
+}
+
 .cw-boder-lg {
   border-width: 10px !important;
 }
 
 .cw-bg-secondary {
   background-color: rgb(242, 242, 242);
+}
+
+.cw-btn-g-reserva{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 335px;
+  height: 50px;
+  color: #ffffff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: pointer;
 }
 
 .cw-cuadro {
@@ -61,6 +80,35 @@
 
 .cw-card-reserva {
   height: 470px;
+  cursor: pointer;
+}
+
+.cw-reserve-hover {
+  transition: all 0.5s ease-in-out;
+}
+
+.cw-reserve-button {
+  padding: 10px;
+  background-color: rgb(25, 144, 206);
+  color: #f2f2f2;
+  transition: all 0.5s ease-in-out;
+}
+.cw-reserve-hover {
+  transition: all 0.6s ease-in-out;
+}
+
+.cw-card-reserva:hover .cw-reserve-hover {
+  background-color: #20202098;
+}
+
+.cw-reserve-hover:hover{
+  box-shadow: 0px 0px 15px rgba(22, 22, 22, 0.8);
+}
+
+.cw-card-reserva:hover .cw-reserve-button {
+  background-color: rgb(62, 149, 196);
+  text-shadow: 0px 0px 5px #f0d227;
+  border-radius: 5px;
 }
 
 .cw-card-rounded-top {
@@ -80,7 +128,7 @@
   right: -15px;
 }
 
-.owl-nav{
+.owl-nav {
   /* background-color: #f2f2f2 !important; */
   position: absolute;
   top: 50%;
@@ -93,20 +141,27 @@
   margin: 0;
 }
 
-.owl-nav>button>span{
+.owl-nav > button > span {
   display: flex;
   padding-top: 20px;
   justify-content: center;
   align-items: center;
 }
-.owl-nav>button{
+.owl-nav > button {
   background-color: transparent !important;
   border: 0px;
   z-index: 15;
 }
-.owl-nav>button>span:hover{
+.owl-nav > button > span:hover {
   border-radius: 20px;
   text-shadow: 0px 0px 10px #6d6d6d;
+}
+
+.cw-close-modal{
+  position: absolute;
+  top: -35px;
+  right: -25px;
+  cursor: pointer;
 }
 
 @media (max-width: 576px) {
@@ -114,7 +169,7 @@
     height: 290px !important;
     width: 290px !important;
   }
-  .owl-nav{
+  .owl-nav {
     font-size: 15px !important;
   }
 }
@@ -124,7 +179,7 @@
     height: 220px !important;
     width: 220px !important;
   }
-  .owl-nav{
+  .owl-nav {
     font-size: 15px !important;
   }
 }
@@ -140,14 +195,24 @@
     width: 250px !important;
   }
 }
-@media (max-width: 1366px){
-  .owl-nav{
+@media (max-width: 1366px) {
+  .owl-nav {
     font-size: 45px !important;
   }
-  .owl-nav>button>span{
+  .owl-nav > button > span {
     padding-top: 0px;
     text-shadow: 0px 0px 5px #202020;
   }
 }
 @media (max-width: 1400px) {
+}
+
+@keyframes button-reserve {
+  0% {
+    background-color: transparent;
+    color: transparent;
+  }
+  50% {
+    color: #f2f2f2;
+  }
 }
