@@ -38,7 +38,7 @@
   border-color: rgb(7, 188, 131) !important;
 }
 
-.cw-w-85{
+.cw-w-85 {
   width: 85%;
 }
 
@@ -50,7 +50,7 @@
   background-color: rgb(242, 242, 242);
 }
 
-.cw-btn-g-reserva{
+.cw-btn-g-reserva {
   position: fixed;
   top: 0;
   right: 0;
@@ -101,7 +101,7 @@
   background-color: #20202098;
 }
 
-.cw-reserve-hover:hover{
+.cw-reserve-hover:hover {
   box-shadow: 0px 0px 15px rgba(22, 22, 22, 0.8);
 }
 
@@ -131,14 +131,13 @@
 .owl-nav {
   /* background-color: #f2f2f2 !important; */
   position: absolute;
-  top: 50%;
+  top: 45%;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 90px;
   color: #f2f2f2;
-  margin: 0;
 }
 
 .owl-nav > button > span {
@@ -157,12 +156,13 @@
   text-shadow: 0px 0px 10px #6d6d6d;
 }
 
-.cw-close-modal{
+.cw-close-modal {
   position: absolute;
   top: -35px;
   right: -25px;
   cursor: pointer;
 }
+
 
 @media (max-width: 576px) {
   .cw-img-card-rounded {
@@ -204,15 +204,14 @@
     text-shadow: 0px 0px 5px #202020;
   }
 }
-@media (max-width: 1400px) {
+@media (min-width: 1367px) {
+  .cw-owl-carousel{
+    width: 1366px !important;
+    margin: auto;
+  }
+  .owl-nav {
+    width: 110%;
+    right: -5%;
+  }
 }
 
-@keyframes button-reserve {
-  0% {
-    background-color: transparent;
-    color: transparent;
-  }
-  50% {
-    color: #f2f2f2;
-  }
-}

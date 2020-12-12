@@ -45,9 +45,10 @@
     <section class="cw-bg-secondary" id="NAVEGACION">
       <nav class="container d-flex justify-content-around">
         <a href="./index.html" class="p-3 btn">Inicio</a>
-        <a href="./index.html#NOSOTROS" class="p-3 btn">Nosotros</a>
-        <a href="./index.html#SERVICIOS2" class="p-3 btn">Servicios</a>
-        <a href="./index.html#CONTACTO" class="p-3 btn">Contactanos</a>
+        <a id="link-nosotros" class="p-3 btn">Nosotros</a>
+        <a id="link-servicios" class="p-3 btn">Servicios</a>
+        <!-- <a href="./index.html#CONTACTO" class="p-3 btn">Contáctanos</a> -->
+        <a id="link-contacto" class="p-3 btn">Contáctanos</a>
       </nav>
     </section>
     <section
@@ -62,14 +63,14 @@
         id="carouselFadeExampleIndicators"
         class="carousel slide bg-warning"
         data-ride="carousel"
-        style="min-height: 640px"
+        style="min-height: 840px"
       >
         <div class="carousel-inner" role="listbox">
           <div class="carousel-item active">
             <div
               class="w-100 cw-img-cover"
               style="
-                height: 640px;
+                height: 840px;
                 background-image: url(https://static.wixstatic.com/media/5a85e4_d13fa4f14bf14f948f3f3b030abdacf3~mv2.jpg/v1/crop/x_91,y_592,w_6389,h_3714/fill/w_1925,h_1116,al_c,q_90,usm_0.66_1.00_0.01/coronavirus-pandemic-disinfector-protect.webp);
               "
             ></div>
@@ -78,7 +79,7 @@
             <div
               class="w-100 cw-img-cover"
               style="
-                height: 640px;
+                height: 840px;
                 background-image: url(https://static.wixstatic.com/media/5a85e4_d13fa4f14bf14f948f3f3b030abdacf3~mv2.jpg/v1/crop/x_91,y_592,w_6389,h_3714/fill/w_1925,h_1116,al_c,q_90,usm_0.66_1.00_0.01/coronavirus-pandemic-disinfector-protect.webp);
               "
             ></div>
@@ -143,9 +144,9 @@
       </section>
     </section>
     <section style="min-height: 650px" id="NOSOTROS">
-      <div class="container py-5">
+      <div class="container py-5 my-5">
         <h2
-          class="m-0 font-weight-bold text-center text-info"
+          class="m-0 font-weight-bold text-center text-info mb-5"
           style="font-size: 75px"
         >
           NOSOTROS
@@ -187,299 +188,9 @@
         </div>
       </div>
     </section>
-    <!-- <section class="bg-primary" id="SERVICIOS">
-      <div class="container-fluid py-5">
-        <h2
-          class="m-0 pb-5 font-weight-bold text-center text-white"
-          style="font-size: 75px"
-        >
-          SERVICIOS
-        </h2>
-        <div class="row">
-          <div class="col-lg-4 pb-5">
-            <div
-              class="card d-flex align-items-center"
-              style="
-                border-top-right-radius: 200px;
-                border-top-left-radius: 200px;
-              "
-            >
-              <img
-                class="rounded-circle mt-5"
-                src="https://images.pexels.com/photos/5727935/pexels-photo-5727935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt=""
-                style="height: 320px; width: 320px"
-              />
-              <div class="card-body">
-                <h3>LAVADO DE TAPICERIA</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                  sint impedit deleniti odit reprehenderit odio sunt esse facere
-                  soluta, culpa ad perspiciatis consequatur cumque voluptatibus
-                  at sequi fugit inventore reiciendis!
-                </p>
-                <button class="btn btn-primary">Ver más</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 pb-5">
-            <div
-              class="card d-flex align-items-center"
-              style="
-                border-top-right-radius: 200px;
-                border-top-left-radius: 200px;
-              "
-            >
-              <img
-                class="rounded-circle mt-5"
-                src="https://images.pexels.com/photos/5727935/pexels-photo-5727935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt=""
-                style="height: 320px; width: 320px"
-              />
-              <div class="card-body">
-                <h3>LAVADO DE SUPERFICIES SÓLIDAS</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                  sint impedit deleniti odit reprehenderit odio sunt esse facere
-                  soluta, culpa ad perspiciatis consequatur cumque voluptatibus
-                  at sequi fugit inventore reiciendis!
-                </p>
-                <button class="btn btn-primary">Ver más</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 pb-5">
-            <div
-              class="card d-flex align-items-center"
-              style="
-                border-top-right-radius: 200px;
-                border-top-left-radius: 200px;
-              "
-            >
-              <img
-                class="rounded-circle mt-5"
-                src="https://images.pexels.com/photos/5727935/pexels-photo-5727935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt=""
-                style="height: 320px; width: 320px"
-              />
-              <div class="card-body">
-                <h3>LAVADO DE SUPERFICIES SÓLIDAS</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                  sint impedit deleniti odit reprehenderit odio sunt esse facere
-                  soluta, culpa ad perspiciatis consequatur cumque voluptatibus
-                  at sequi fugit inventore reiciendis!
-                </p>
-                <button class="btn btn-primary">Ver más</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 pb-5">
-            <div
-              class="card d-flex align-items-center"
-              style="
-                border-top-right-radius: 200px;
-                border-top-left-radius: 200px;
-              "
-            >
-              <img
-                class="rounded-circle mt-5"
-                src="https://images.pexels.com/photos/5727935/pexels-photo-5727935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt=""
-                style="height: 320px; width: 320px"
-              />
-              <div class="card-body">
-                <h3>LAVADO DE ALMOHADAS</h3>
-                <p>
-                  El servicio se contará con personal totalmente capacitado para
-                  la labor, desinfectando y dejando como nuevo sus colchones
-                </p>
-                <button class="btn btn-primary">Ver más</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 pb-5">
-            <div
-              class="card d-flex align-items-center"
-              style="
-                border-top-right-radius: 200px;
-                border-top-left-radius: 200px;
-              "
-            >
-              <img
-                class="rounded-circle mt-5"
-                src="https://images.pexels.com/photos/5727935/pexels-photo-5727935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt=""
-                style="height: 320px; width: 320px"
-              />
-              <div class="card-body">
-                <h3>LAVADO DE PELUCHES</h3>
-                <p>
-                  El servicio se contará con personal totalmente capacitado para
-                  la labor, desinfectando y dejando como nuevo sus colchon
-                </p>
-                <button class="btn btn-primary">Ver más</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!-- <section class="cw-bg-blue-transparent" id="SERVICIOS2">
-      <div class="container-fluid py-5">
-        <h2
-          class="m-0 pb-5 font-weight-bold text-center text-white"
-          style="font-size: 75px"
-        >
-          SERVICIOS
-        </h2>
-        <div class="row">
-          <div class="col-lg-4 pb-5">
-            <div
-              class="card d-flex align-items-center cw-card-rounded-top shadow position-relative"
-            >
-              <div
-                class="rounded-circle mt-5 cw-img-card-rounded bg-danger cw-img-cover"
-                style="
-                  background-image: url(https://images.pexels.com/photos/5727935/pexels-photo-5727935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-                "
-              ></div>
-              <div class="card-body">
-                <h3 class="text-center text-primary font-weight-bold my-3">
-                  LAVADO DE TAPICERIA
-                </h3>
-                <p class="text-justify">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                  sint impedit deleniti odit reprehenderit odio sunt esse facere
-                  soluta, culpa ad perspiciatis consequatur cumque voluptatibus
-                  at sequi fugit inventore reiciendis!
-                </p>
-              </div>
-              <button
-                class="btn btn-danger position-absolute cw-button-card-rounded"
-              >
-                Ver más
-              </button>
-            </div>
-          </div>
-          <div class="col-lg-4 pb-5">
-            <div
-              class="card d-flex align-items-center cw-card-rounded-top shadow position-relative"
-            >
-              <div
-                class="rounded-circle mt-5 cw-img-card-rounded bg-danger cw-img-cover"
-                style="
-                  background-image: url(https://images.pexels.com/photos/5727935/pexels-photo-5727935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-                "
-              ></div>
-              <div class="card-body">
-                <h3 class="text-center text-primary font-weight-bold my-3">
-                  LAVADO DE <br> TAPIZONES / ALFOMBRAS
-                </h3>
-                <p class="text-justify">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                  sint impedit deleniti odit reprehenderit odio sunt esse facere
-                  soluta, culpa ad perspiciatis consequatur cumque voluptatibus
-                  at sequi fugit inventore reiciendis!
-                </p>
-              </div>
-              <button
-                class="btn btn-danger position-absolute cw-button-card-rounded"
-              >
-                Ver más
-              </button>
-            </div>
-          </div>
-          <div class="col-lg-4 pb-5">
-            <div
-              class="card d-flex align-items-center cw-card-rounded-top shadow position-relative"
-            >
-              <div
-                class="rounded-circle mt-5 cw-img-card-rounded bg-danger cw-img-cover"
-                style="
-                  background-image: url(https://images.pexels.com/photos/5727935/pexels-photo-5727935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-                "
-              ></div>
-              <div class="card-body">
-                <h3 class="text-center text-primary font-weight-bold my-3">
-                  LAVADO DE SUPERFICIES SÓLIDAS
-                </h3>
-                <p class="text-justify">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                  sint impedit deleniti odit reprehenderit odio sunt esse facere
-                  soluta, culpa ad perspiciatis consequatur cumque voluptatibus
-                  at sequi fugit inventore reiciendis!
-                </p>
-              </div>
-              <button
-                class="btn btn-danger position-absolute cw-button-card-rounded"
-              >
-                Ver más
-              </button>
-            </div>
-          </div>
-          <div class="col-lg-4 pb-5">
-            <div
-              class="card d-flex align-items-center cw-card-rounded-top shadow position-relative"
-            >
-              <div
-                class="rounded-circle mt-5 cw-img-card-rounded bg-danger cw-img-cover"
-                style="
-                  background-image: url(https://images.pexels.com/photos/5727935/pexels-photo-5727935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-                "
-              ></div>
-              <div class="card-body">
-                <h3 class="text-center text-primary font-weight-bold my-3">
-                  LAVADO DE ALMOHADAS
-                </h3>
-                <p class="text-justify">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                  sint impedit deleniti odit reprehenderit odio sunt esse facere
-                  soluta, culpa ad perspiciatis consequatur cumque voluptatibus
-                  at sequi fugit inventore reiciendis!
-                </p>
-              </div>
-              <button
-                class="btn btn-danger position-absolute cw-button-card-rounded"
-              >
-                Ver más
-              </button>
-            </div>
-          </div>
-          <div class="col-lg-4 pb-5">
-            <div
-              class="card d-flex align-items-center cw-card-rounded-top shadow position-relative"
-            >
-              <div
-                class="rounded-circle mt-5 cw-img-card-rounded bg-danger cw-img-cover"
-                style="
-                  background-image: url(https://images.pexels.com/photos/5727935/pexels-photo-5727935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-                "
-              ></div>
-              <div class="card-body">
-                <h3 class="text-center text-primary font-weight-bold my-3">
-                  LAVADO DE PELUCHES
-                </h3>
-                <p class="text-justify">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                  sint impedit deleniti odit reprehenderit odio sunt esse facere
-                  soluta, culpa ad perspiciatis consequatur cumque voluptatibus
-                  at sequi fugit inventore reiciendis!
-                </p>
-              </div>
-              <button
-                class="btn btn-danger position-absolute cw-button-card-rounded"
-              >
-                Ver más
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
     <section
       class="cw-img-cover"
-      id="SERVICIOS2"
+      id="SERVICIOS"
       style="
         background-image: linear-gradient(
             135deg,
@@ -490,7 +201,7 @@
         background-attachment: fixed;
       "
     >
-      <div class="container-fluid py-5">
+      <div class="container-fluid py-5 overflow-hidden">
         <h2
           class="m-0 pb-5 font-weight-bold text-center text-white"
           style="font-size: 75px"
@@ -498,7 +209,7 @@
           SERVICIOS
         </h2>
         <div
-          class="owl-carousel owl-theme position-relative"
+          class="owl-carousel owl-theme position-relative cw-owl-carousel"
           id="owl-servicios"
         >
           <div
@@ -509,7 +220,7 @@
               style="min-height: 701px; max-width: 406px"
             >
               <div
-                class="rounded-circle mt-5 cw-img-card-rounded bg-danger cw-img-cover"
+                class="rounded-circle mt-5 cw-img-card-rounded cw-img-cover"
                 style="
                   background-image: url(https://images.pexels.com/photos/5727935/pexels-photo-5727935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
                 "
@@ -665,39 +376,6 @@
         </div>
       </div>
     </section>
-    <!-- <section class="container py-5" id="CONTACTO">
-      <h2
-        class="m-0 pb-5 font-weight-bold text-center text-info"
-        style="font-size: 75px"
-      >
-        CONTACTO
-      </h2>
-      <div class="row">
-        <div class="col-lg-6 text-center">
-          <h3 class="mb-4">Nuestra dirección</h3>
-          <p class="m-0 text-muted">Av. Los Rosales 122</p>
-          <p class="m-0">28021, Madrid.</p>
-          <p class="m-0">info@misitio.com \\ Tel: 914-123-456</p>
-        </div>
-        <div class="col-lg-6 text-center">
-          <h3 class="mb-4">Horarios</h3>
-          <p class="m-0 text-muted">Lunes-Viernes 09:00AM - 19:00PM</p>
-          <p class="m-0">Sábados 09:00AM - 14:00PM</p>
-        </div>
-        <div class="col-lg-12">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124877.93745628887!2d-77.14192572322294!3d-12.013507602988224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cc3d52f51e01%3A0x1f75ae97fb12652c!2sAeropuerto%20Internacional%20Jorge%20Ch%C3%A1vez!5e0!3m2!1ses!2spe!4v1607384964799!5m2!1ses!2spe"
-            width="100%"
-            height="450"
-            frameborder="0"
-            style="border: 0"
-            allowfullscreen=""
-            aria-hidden="false"
-            tabindex="0"
-          ></iframe>
-        </div>
-      </div>
-    </section> -->
     <section class="container py-5" id="CONTACTO">
       <h2
         class="m-0 pb-2 font-weight-bold text-center text-info"
@@ -705,7 +383,9 @@
       >
         CONTACTO
       </h2>
-      <div class="w-100 pb-4 d-flex align-items-center justify-content-center">
+      <div
+        class="w-100 pb-4 mb-5 d-flex align-items-center justify-content-center"
+      >
         <div class="cw-cuadro cw-bg-teal"></div>
       </div>
       <div class="row">
@@ -821,7 +501,6 @@
             class="col-lg-6 d-flex align-items-center justify-content-center"
           >
             <i class="fa fa-facebook fa-2x px-2 text-muted"></i>
-            <i class="fa fa-twitter fa-2x px-2 text-muted"></i>
             <i class="fa fa-instagram fa-2x px-2 text-muted"></i>
           </div>
         </div>
@@ -835,7 +514,7 @@
       </div>
     </section>
     <section
-      class="modal"
+      class="modal fade"
       id="exampleModalCentered"
       tabindex="-1"
       role="dialog"
@@ -899,11 +578,7 @@
         </div>
       </div>
     </section>
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
+    <script src="./jquery.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
       integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
@@ -942,6 +617,52 @@
           },
         },
       });
+
+      function cwGetParams(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+          results = regex.exec(location.search);
+        return results === null
+          ? ""
+          : decodeURIComponent(results[1].replace(/\+/g, " "));
+      }
+
+      $("#link-contacto").click(function () {
+        $("html, body").animate(
+          { scrollTop: $("#CONTACTO").offset().top },
+          1500
+        );
+      });
+
+      $("#link-nosotros").click(function () {
+        $("html, body").animate(
+          { scrollTop: $("#NOSOTROS").offset().top },
+          1500
+        );
+      });
+
+      $("#link-servicios").click(function () {
+        $("html, body").animate(
+          { scrollTop: $("#SERVICIOS").offset().top },
+          1500
+        );
+      });
+
+      let CW_SECTION = cwGetParams("section");
+      switch (CW_SECTION) {
+        case "NOSOTROS":
+          $("#link-nosotros").trigger("click");
+          break;
+        case "SERVICIOS":
+          $("#link-servicios").trigger("click");
+          break;
+        case "CONTACTO":
+          $("#link-contacto").trigger("click");
+          break;
+
+        default:
+          break;
+      }
     </script>
   </body>
 </html>
