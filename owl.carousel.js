@@ -2963,8 +2963,8 @@
 	Navigation.Defaults = {
 		nav: false,
 		navText: [
-			'<span aria-label="' + 'Previous' + '"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>',
-			'<span aria-label="' + 'Next' + '"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>'
+			'<span aria-label="' + 'Previous' + '"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>',
+			'<span aria-label="' + 'Next' + '"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>'
 		],
 		navSpeed: false,
 		navElement: 'button type="button" role="presentation"',

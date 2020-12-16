@@ -80,6 +80,7 @@
 
 .cw-card-reserva {
   height: 470px;
+  width: 350px;
   cursor: pointer;
 }
 
@@ -156,13 +157,17 @@
   text-shadow: 0px 0px 10px #6d6d6d;
 }
 
+#owl-subservice > .owl-nav {
+  top: 40%;
+  margin-top: 0;
+}
+
 .cw-close-modal {
   position: absolute;
   top: -35px;
   right: -25px;
   cursor: pointer;
 }
-
 
 @media (max-width: 576px) {
   .cw-img-card-rounded {
@@ -205,7 +210,7 @@
   }
 }
 @media (min-width: 1367px) {
-  .cw-owl-carousel{
+  .cw-owl-carousel {
     width: 1366px !important;
     margin: auto;
   }
@@ -214,4 +219,3 @@
     right: -5%;
   }
 }
-
