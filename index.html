@@ -66,7 +66,9 @@
               <a class="nav-link" href="./index.html" class="p-3 btn">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" class="p-3 btn" id="link-nosotros">Nosotros</a>
+              <a class="nav-link" class="p-3 btn" id="link-nosotros"
+                >Nosotros</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" class="p-3 btn" id="link-servicios"
@@ -82,13 +84,12 @@
         </div>
       </nav>
     </section>
-    <section
+    <a
       class="cw-btn-g-reserva cw-bg-green"
-      data-toggle="modal"
-      data-target="#exampleModalCentered"
+      onclick='$("#link-servicios").trigger("click");'
     >
       Reserva aquí
-    </section>
+    </a>
     <section class="position-relative" id="CARRUSEL">
       <div
         id="carouselFadeExampleIndicators"
@@ -252,9 +253,7 @@
             >
               <div
                 class="rounded-circle mt-5 cw-img-card-rounded cw-img-cover"
-                style="
-                  background-image: url(https://images.pexels.com/photos/5727935/pexels-photo-5727935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-                "
+                style="background-image: url(./assets/img/colchon.jpg)"
               ></div>
               <div class="card-body">
                 <h3 class="text-center text-primary font-weight-bold my-3">
@@ -268,7 +267,39 @@
                 </p>
               </div>
               <a
-                href="./tapizones.html"
+                href="./colchones/"
+                class="btn btn-danger position-absolute cw-button-card-rounded"
+              >
+                Ver más
+              </a>
+            </div>
+          </div>
+          <div
+            class="mx-3 item d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="card d-flex align-items-center cw-card-rounded-top shadow position-relative"
+              style="min-height: 701px; max-width: 406px"
+            >
+              <div
+                class="rounded-circle mt-5 cw-img-card-rounded cw-img-cover"
+                style="background-image: url(./assets/img/muebles-sillas.jpg)"
+              ></div>
+              <div class="card-body">
+                <h3 class="text-center text-primary font-weight-bold my-3">
+                  Lavado de <br />
+                  muebles / sillas
+                </h3>
+                <p class="text-justify">
+                  Evitamos la deformación del relleno y conservamos el tiempo de
+                  vida de tus muebles, sillas, sofás, etc. Es por eso que solo
+                  trabajamos el tapizado. Además, utilizamos productos
+                  biodegradables y máquinas industriales que permiten un secado
+                  rápido.
+                </p>
+              </div>
+              <a
+                href="./muebles/"
                 class="btn btn-danger position-absolute cw-button-card-rounded"
               >
                 Ver más
@@ -289,38 +320,6 @@
               <div class="card-body">
                 <h3 class="text-center text-primary font-weight-bold my-3">
                   Lavado de <br />
-                  muebles / sillas
-                </h3>
-                <p class="text-justify">
-                  Evitamos la deformación del relleno y conservamos el tiempo de
-                  vida de tus muebles, sillas, sofás, etc. Es por eso que solo
-                  trabajamos el tapizado. Además, utilizamos productos
-                  biodegradables y máquinas industriales que permiten un secado
-                  rápido.
-                </p>
-              </div>
-              <a
-                href="./tapizones.html"
-                class="btn btn-danger position-absolute cw-button-card-rounded"
-              >
-                Ver más
-              </a>
-            </div>
-          </div>
-          <div
-            class="mx-3 item d-flex align-items-center justify-content-center"
-          >
-            <div
-              class="card d-flex align-items-center cw-card-rounded-top shadow position-relative"
-              style="min-height: 701px; max-width: 406px"
-            >
-              <div
-                class="rounded-circle mt-5 cw-img-card-rounded cw-img-cover"
-                style="background-image: url(./assets/img/solido.jpg)"
-              ></div>
-              <div class="card-body">
-                <h3 class="text-center text-primary font-weight-bold my-3">
-                  Lavado de <br />
                   alfombras / tapizones
                 </h3>
                 <p class="text-justify">
@@ -330,7 +329,7 @@
                 </p>
               </div>
               <a
-                href="./tapizones.html"
+                href="./tapizones/"
                 class="btn btn-danger position-absolute cw-button-card-rounded"
               >
                 Ver más
@@ -346,7 +345,7 @@
             >
               <div
                 class="rounded-circle mt-5 cw-img-card-rounded cw-img-cover"
-                style="background-image: url(./assets/img/almohada.jpg)"
+                style="background-image: url(./assets/img/cortina.jpg)"
               ></div>
               <div class="card-body">
                 <h3 class="text-center text-primary font-weight-bold my-3">
@@ -361,7 +360,7 @@
                 </p>
               </div>
               <a
-                href="./tapizones.html"
+                href="./cortinas/"
                 class="btn btn-danger position-absolute cw-button-card-rounded"
               >
                 Ver más
@@ -393,7 +392,7 @@
                 </p>
               </div>
               <a
-                href="./tapizones.html"
+                href="./peluches/"
                 class="btn btn-danger position-absolute cw-button-card-rounded"
               >
                 Ver más
@@ -409,7 +408,7 @@
             >
               <div
                 class="rounded-circle mt-5 cw-img-card-rounded cw-img-cover"
-                style="background-image: url(./assets/img/peluches.jpg)"
+                style="background-image: url(./assets/img/solido.jpg)"
               ></div>
               <div class="card-body">
                 <h3 class="text-center text-primary font-weight-bold my-3">
@@ -424,7 +423,7 @@
                 </p>
               </div>
               <a
-                href="./tapizones.html"
+                href="./solidas/"
                 class="btn btn-danger position-absolute cw-button-card-rounded"
               >
                 Ver más
@@ -504,7 +503,7 @@
                 style="
                   height: 280px;
                   width: 280px;
-                  background-image: url(https://images.pexels.com/photos/5727935/pexels-photo-5727935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+                  background-image: url(./assets/img/alfombra.jpg);
                 "
               ></div>
             </div>
@@ -514,7 +513,7 @@
                 style="
                   height: 280px;
                   width: 280px;
-                  background-image: url(https://images.pexels.com/photos/5727935/pexels-photo-5727935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+                  background-image: url(./assets/img/almohada.jpg);
                 "
               ></div>
             </div>
@@ -524,7 +523,7 @@
                 style="
                   height: 280px;
                   width: 280px;
-                  background-image: url(https://images.pexels.com/photos/5727935/pexels-photo-5727935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+                  background-image: url(./assets/img/cleaner.jpg);
                 "
               ></div>
             </div>
@@ -534,7 +533,7 @@
                 style="
                   height: 280px;
                   width: 280px;
-                  background-image: url(https://images.pexels.com/photos/5727935/pexels-photo-5727935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+                  background-image: url(./assets/img/peluche.jpg);
                 "
               ></div>
             </div>
@@ -543,10 +542,12 @@
         <div class="col"></div>
       </div>
     </section>
-    <footer class="cw-bg-yellow" id="FOOTER">
+    <footer class="cw-bg-yellow position-relative" id="FOOTER">
       <div class="container py-5">
         <div class="row my-5">
-          <div class="col-lg-6 mb-3 d-flex align-items-center justify-content-center">
+          <div
+            class="col-lg-6 mb-3 d-flex align-items-center justify-content-center"
+          >
             <h6 class="m-0">
               © 2020 Speed Clean. Creado por Bad Panda Producciones
             </h6>
@@ -559,6 +560,20 @@
           </div>
         </div>
       </div>
+      <section
+        class="position-fixed d-flex justify-content-center align-items-center"
+        style="
+          z-index: 9;
+          bottom: 0;
+          width: 45px;
+          height: 45px;
+          margin: 0 50% 0 50%;
+        "
+      >
+        <a class="btn cw-btn-ini" id="cw-ini"
+          ><i class="fa fa-chevron-up fa-2x"></i
+        ></a>
+      </section>
     </footer>
     <section class="container-fluid" id="DECORACION2">
       <div class="row">

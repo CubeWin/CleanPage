@@ -61,7 +61,11 @@ $("#link-nosotros").click(function () {
 });
 
 $("#link-servicios").click(function () {
-  $("html, body").animate({ scrollTop: $("#SERVICIOS").offset().top }, 1500);
+  $("html, body").animate({ scrollTop: $("#SERVICIOS").offset().top }, 800);
+});
+
+$("#cw-ini").click(function () {
+  $("html,body").animate({ scrollTop: 0 }, 1000);
 });
 
 let CW_SECTION = cwGetParams("section");

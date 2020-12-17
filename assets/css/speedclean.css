@@ -63,6 +63,8 @@
   justify-content: center;
   z-index: 9999;
   cursor: pointer;
+  text-decoration: none !important;
+  transition: all .5s ease-in-out;
 }
 
 .cw-cuadro {
@@ -167,6 +169,16 @@
   top: -35px;
   right: -25px;
   cursor: pointer;
+}
+
+.cw-btn-ini{
+  color: rgb(25, 144, 206);
+  text-shadow: 1px 1px 5px #333333;
+  transition: all .5s ease-in-out;
+}
+.cw-btn-ini:hover{
+  color: rgb(228, 228, 228);
+  text-shadow: 0px 0px 8px #000000;
 }
 /**
 **

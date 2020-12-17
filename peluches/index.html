@@ -11,11 +11,11 @@
     <meta name="description" content="" />
     <meta property="og:title" content="" />
     <meta property="og:description" content="" />
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="./assets/css/owl.theme.default.css" />
-    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="./assets/css/speedclean.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../assets/css/owl.theme.default.css" />
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../assets/css/speedclean.css" />
   </head>
   <body>
     <section class="container-fluid" id="DECORACION">
@@ -63,12 +63,12 @@
             class="navbar-nav cw-nav-custom d-flex justify-content-around align-items-center m-0 w-100"
           >
             <li class="nav-item">
-              <a class="nav-link" href="./index.html" class="p-3 btn">Inicio</a>
+              <a class="nav-link" href="../index.html" class="p-3 btn">Inicio</a>
             </li>
             <li class="nav-item">
               <a
                 class="nav-link"
-                href="./index.html?section=NOSOTROS"
+                href="../index.html?section=NOSOTROS"
                 class="p-3 btn"
                 id="link-nosotros"
                 >Nosotros</a
@@ -77,7 +77,7 @@
             <li class="nav-item">
               <a
                 class="nav-link"
-                href="./index.html?section=SERVICIOS"
+                href="../index.html?section=SERVICIOS"
                 class="p-3 btn"
                 id="link-servicios"
                 >Servicios</a
@@ -86,7 +86,7 @@
             <li class="nav-item">
               <a
                 class="nav-link"
-                href="./index.html?section=CONTACTO"
+                href="../index.html?section=CONTACTO"
                 class="p-3 btn"
                 id="link-contacto"
                 >Contáctanos</a
@@ -96,13 +96,12 @@
         </div>
       </nav>
     </section>
-    <section
+    <a
+      href="../index.html?section=SERVICIOS"
       class="cw-btn-g-reserva cw-bg-green"
-      data-toggle="modal"
-      data-target="#exampleModalCentered"
     >
       Reserva aquí
-    </section>
+    </a>
     <section
       class="cw-img-cover"
       style="
@@ -111,16 +110,16 @@
             rgba(25, 144, 206, 0.8) 0%,
             rgba(25, 144, 206, 0.8) 100%
           ),
-          url(./assets/img/cleaner.jpg);
+          url(../assets/img/cleaner.jpg);
         background-attachment: fixed;
       "
     >
       <div class="container-fluid py-5 overflow-hidden">
         <h1
-          class="m-0 pb-5 text-center text-white font-weight-bold"
+          class="m-0 pb-5 text-center text-white font-weight-bold text-uppercase"
           style="font-size: 75px"
         >
-          LAVADO DE TAPIZONES / ALFOMBRAS
+          LAVADO DE peluches y almohadas
         </h1>
 
         <div
@@ -138,7 +137,8 @@
                 max-width: 350px;
               "
               data-toggle="modal"
-              data-target="#exampleModalCentered"
+              data-target="#cw-modal-service"
+              data-bs-whatever=""
             >
               <div
                 class="position-absolute h-100 w-100 cw-reserve-hover d-flex justify-content-end align-items-end"
@@ -159,7 +159,7 @@
                 max-width: 350px;
               "
               data-toggle="modal"
-              data-target="#exampleModalCentered"
+              data-target="#cw-modal-service"
             >
               <div
                 class="position-absolute h-100 w-100 cw-reserve-hover d-flex justify-content-end align-items-end"
@@ -180,7 +180,7 @@
                 max-width: 350px;
               "
               data-toggle="modal"
-              data-target="#exampleModalCentered"
+              data-target="#cw-modal-service"
             >
               <div
                 class="position-absolute h-100 w-100 cw-reserve-hover d-flex justify-content-end align-items-end"
@@ -201,7 +201,7 @@
                 max-width: 350px;
               "
               data-toggle="modal"
-              data-target="#exampleModalCentered"
+              data-target="#cw-modal-service"
             >
               <div
                 class="position-absolute h-100 w-100 cw-reserve-hover d-flex justify-content-end align-items-end"
@@ -265,7 +265,7 @@
     </section>
     <section
       class="modal fade"
-      id="exampleModalCentered"
+      id="cw-modal-service"
       tabindex="-1"
       role="dialog"
       aria-labelledby="exampleModalCenteredLabel"
@@ -305,8 +305,10 @@
               />
               <input
                 type="text"
-                class="form-control rounded-0 cw-w-85 mb-2"
+                class="form-control rounded-0 cw-w-85 mb-2 text-uppercase"
                 placeholder="LAVADO DE TAPIZON"
+                disabled
+                value="LAVADO DE peluches y almohadas"
               />
               <input
                 type="text"
@@ -314,7 +316,7 @@
                 placeholder="Dirección"
               />
               <input
-                type="text"
+                type="date"
                 class="form-control rounded-0 cw-w-85 mb-2"
                 placeholder="Fecha del servicio"
               />
@@ -328,82 +330,10 @@
         </div>
       </div>
     </section>
-    <section
-      class="position-absolute m-auto bg-danger"
-      style="z-index: 9; bottom: 0; width: 50px; height: 50px;"
-    >
-      <i class="fa fa-arrow-up"></i>g
-    </section>
-
-    <section
-      class="modal fade"
-      id="exampleModalCentered"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalCenteredLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content rounded-0">
-          <div class="modal-body px-5 cw-bg-yellow">
-            <div class="cw-close-modal">
-              <i
-                class="fa fa-close fa-4x text-info"
-                data-dismiss="modal"
-                aria-label="Close"
-              ></i>
-            </div>
-            <h2
-              class="text-info text-uppercase text-center font-weight-bold mt-3"
-              style="font-size: 60px"
-            >
-              Reserva tu servicio
-            </h2>
-            <form class="py-5" action="#" onsubmit="return false">
-              <input
-                type="text"
-                class="form-control rounded-0 cw-w-85 mb-2"
-                placeholder="Nombres y Apellidos"
-              />
-              <input
-                type="text"
-                class="form-control rounded-0 cw-w-85 mb-2"
-                placeholder="Email"
-              />
-              <input
-                type="text"
-                class="form-control rounded-0 cw-w-85 mb-2"
-                placeholder="Celular"
-              />
-              <input
-                type="text"
-                class="form-control rounded-0 cw-w-85 mb-2"
-                placeholder="LAVADO DE TAPIZON"
-              />
-              <input
-                type="text"
-                class="form-control rounded-0 cw-w-85 mb-2"
-                placeholder="Dirección"
-              />
-              <input
-                type="text"
-                class="form-control rounded-0 cw-w-85 mb-2"
-                placeholder="Fecha del servicio"
-              />
-              <div class="w-100 text-right pt-5">
-                <button type="submit" class="btn btn-info rounded-0 px-3">
-                  <i class="fa fa-send"></i> Enviar
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-    <script src="./assets/js/jquery.min.js"></script>
-    <script src="./assets/js/popper.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
-    <script src="./assets/js/owl.carousel.js"></script>
-    <script src="./assets/js/speedclean.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/popper.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/owl.carousel.js"></script>
+    <script src="../assets/js/speedclean.js"></script>
   </body>
 </html>
