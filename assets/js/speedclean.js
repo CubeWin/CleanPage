@@ -83,3 +83,69 @@ switch (CW_SECTION) {
   default:
     break;
 }
+
+async function mensajeServicios() {
+  let cwPersona = $("input[name='cwPersona']").value;
+  let cwEmail = $("input[name='cwEmail']").value;
+  let cwCelular = $("input[name='cwCelular']").value;
+  let cwServicio = $("input[name='cwServicio']").value;
+  let cwDireccion = $("input[name='cwDireccion']").value;
+  let cwFecha = $("input[name='cwFecha']").value;
+
+  let formData = new FormData();
+
+  formData.append("cwPersona", cwPersona);
+  formData.append("cwEmail", cwEmail);
+  formData.append("cwCelular", cwCelular);
+  formData.append("cwServicio", cwServicio);
+  formData.append("cwDireccion", cwDireccion);
+  formData.append("cwFecha", cwFecha);
+
+  const cwresponse = await fetch("../enviar.php", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    method: "POST",
+    body: JSON.stringify(Object.fromEntries(formData)),
+  });
+
+  if ((cwresponse = "true")) {
+    alert("mensaje enviado");
+  } else {
+    alert("mensaje no enviado");
+  }
+}
+
+async function mensajeContacto(){
+  let cw_nombres = $("input[name='cw_nombres']").value;
+  let cw_apellidos = $("input[name='cw_apellidos']").value;
+  let cw_correo = $("input[name='cw_correo']").value;
+  let cw_telefono = $("input[name='cw_telefono']").value;
+  let cw_mensaje = $("textarea[name='cw_mensaje']").value;
+
+  let formData = new FormData();
+
+  formData.append("cw_nombres", cw_nombres);
+  formData.append("cw_apellidos", cw_apellidos);
+  formData.append("cw_correo", cw_correo);
+  formData.append("cw_telefono", cw_telefono);
+  formData.append("cw_mensaje", cw_mensaje);
+
+  const cwresponse = await fetch("../enviar.php", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    method: "POST",
+    body: JSON.stringify(Object.fromEntries(formData)),
+  });
+
+  if ((cwresponse = "true")) {
+    alert("mensaje enviado");
+  } else {
+    alert("mensaje no enviado");
+  }
+}
