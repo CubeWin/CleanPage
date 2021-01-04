@@ -85,12 +85,12 @@ switch (CW_SECTION) {
 }
 
 async function mensajeServicios() {
-  let cwPersona = $("input[name='cwPersona']").value;
-  let cwEmail = $("input[name='cwEmail']").value;
-  let cwCelular = $("input[name='cwCelular']").value;
-  let cwServicio = $("input[name='cwServicio']").value;
-  let cwDireccion = $("input[name='cwDireccion']").value;
-  let cwFecha = $("input[name='cwFecha']").value;
+  let cwPersona = $("input[name='cwPersona']").val();
+  let cwEmail = $("input[name='cwEmail']").val();
+  let cwCelular = $("input[name='cwCelular']").val();
+  let cwServicio = $("input[name='cwServicio']").val();
+  let cwDireccion = $("input[name='cwDireccion']").val();
+  let cwFecha = $("input[name='cwFecha']").val();
 
   let formData = new FormData();
 
@@ -101,29 +101,36 @@ async function mensajeServicios() {
   formData.append("cwDireccion", cwDireccion);
   formData.append("cwFecha", cwFecha);
 
-  const cwresponse = await fetch("../enviar.php", {
+  await fetch("https://speedcleanperu.com/enviar.php", {
     method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    method: "POST",
-    body: JSON.stringify(Object.fromEntries(formData)),
-  });
-
-  if ((cwresponse = "true")) {
-    alert("mensaje enviado");
-  } else {
-    alert("mensaje no enviado");
-  }
+    body: formData,
+  })
+    .then((response) => response.text())
+    .then((response) => {
+      if (response === "true") {
+        console.log("mensaje enviado :", response);
+        clearInputServicios()
+        $('button[name="cw_service_submit"]').attr("disabled", false);
+        alert("Mensaje enviado correctamente");
+      } else {
+        $('button[name="cw_service_submit"]').attr("disabled", false);
+        console.log("mensaje no enviado :", response);
+      }
+    });
 }
 
-async function mensajeContacto(){
-  let cw_nombres = $("input[name='cw_nombres']").value;
-  let cw_apellidos = $("input[name='cw_apellidos']").value;
-  let cw_correo = $("input[name='cw_correo']").value;
-  let cw_telefono = $("input[name='cw_telefono']").value;
-  let cw_mensaje = $("textarea[name='cw_mensaje']").value;
+$("#cw-modal-service").on("show.bs.modal", function (event) {
+  var button = $(event.relatedTarget);
+  var recipient = button.data("whatever");
+  $('[name="cwServicio"]').val(recipient);
+});
+
+async function mensajeContacto() {
+  let cw_nombres = $("input[name='cw_nombres']").val();
+  let cw_apellidos = $("input[name='cw_apellidos']").val();
+  let cw_correo = $("input[name='cw_correo']").val();
+  let cw_telefono = $("input[name='cw_telefono']").val();
+  let cw_mensaje = $("textarea[name='cw_mensaje']").val();
 
   let formData = new FormData();
 
@@ -133,19 +140,126 @@ async function mensajeContacto(){
   formData.append("cw_telefono", cw_telefono);
   formData.append("cw_mensaje", cw_mensaje);
 
-  const cwresponse = await fetch("../enviar.php", {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    method: "POST",
-    body: JSON.stringify(Object.fromEntries(formData)),
-  });
+  console.log(formData);
+  console.log(cw_mensaje);
 
-  if ((cwresponse = "true")) {
-    alert("mensaje enviado");
+  await fetch("https://speedcleanperu.com/enviarContacto.php", {
+    method: "POST",
+    body: formData,
+  })
+    .then((response) => response.text())
+    .then((response) => {
+      if (response === "true") {
+        console.log("mensaje enviado :", response);
+        clearInputContacto();
+        $('button[name="cw_contact_submit"]').attr("disabled", false);
+        alert("Mensaje enviado correctamente");
+      } else {
+        console.log("mensaje no enviado :", response);
+      }
+    });
+}
+
+const validText = (texto) => {
+  const re = /^[a-zA-Z0-9\s]*$/;
+  return re.test(texto);
+};
+const validEmail = (email) => {
+  const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+};
+const validNumb = (numero) => {
+  const re = /^([0-9])*$/;
+  return re.test(numero);
+};
+const formValidateInputText = (input) => {
+  if (validText(input.value)) {
+    $('[name="' + input.name + '"]').removeClass("bg-dark");
+    $('[name="' + input.name + '"]').removeClass("is-invalid");
+    $('[name="' + input.name + '"]').removeClass("text-white");
   } else {
-    alert("mensaje no enviado");
+    $('[name="' + input.name + '"]').addClass("bg-dark");
+    $('[name="' + input.name + '"]').addClass("is-invalid");
+    $('[name="' + input.name + '"]').addClass("text-white");
   }
+};
+const formValidateInputCorreo = (input) => {
+  if (validEmail(input.value)) {
+    $('[name="' + input.name + '"]').removeClass("bg-dark");
+    $('[name="' + input.name + '"]').removeClass("is-invalid");
+    $('[name="' + input.name + '"]').removeClass("text-white");
+  } else {
+    $('[name="' + input.name + '"]').addClass("bg-dark");
+    $('[name="' + input.name + '"]').addClass("is-invalid");
+    $('[name="' + input.name + '"]').addClass("text-white");
+  }
+};
+const formValidateInputNumber = (input) => {
+  if (validNumb(input.value)) {
+    $('[name="' + input.name + '"]').removeClass("bg-dark");
+    $('[name="' + input.name + '"]').removeClass("is-invalid");
+    $('[name="' + input.name + '"]').removeClass("text-white");
+  } else {
+    $('[name="' + input.name + '"]').addClass("bg-dark");
+    $('[name="' + input.name + '"]').addClass("is-invalid");
+    $('[name="' + input.name + '"]').addClass("text-white");
+  }
+};
+
+$('button[name="cw_contact_submit"]').click(function () {
+  $('button[name="cw_contact_submit"]').attr("disabled", true);
+  let cw_nombres = validText($("input[name='cw_nombres']").val());
+  let cw_apellidos = validText($("input[name='cw_apellidos']").val());
+  let cw_correo = validEmail($("input[name='cw_correo']").val());
+  let cw_telefono = validNumb($("input[name='cw_telefono']").val());
+  let cw_mensaje = validText($("textarea[name='cw_mensaje']").val());
+
+  if (cw_nombres && cw_apellidos && cw_mensaje && cw_correo && cw_telefono) {
+    console.log("enviar mensaje");
+    mensajeContacto();
+  } else {
+    console.log(":c");
+    $('button[name="cw_contact_submit"]').attr("disabled", false);
+  }
+});
+
+$('button[name="cw_service_submit"]').click(function () {
+  $('button[name="cw_service_submit"]').attr("disabled", true);
+  let cwPersona = validText($("input[name='cwPersona']").val());
+  let cwEmail = validEmail($("input[name='cwEmail']").val());
+  let cwCelular = validNumb($("input[name='cwCelular']").val());
+  let cwServicio = $("input[name='cwServicio']").val();
+  let cwDireccion = $("input[name='cwDireccion']").val();
+  let cwFecha = $("input[name='cwFecha']").val();
+
+  if (
+    cwPersona &&
+    cwEmail &&
+    cwCelular &&
+    cwServicio != "" &&
+    cwDireccion != "" &&
+    (cwFecha != "" && cwFecha != undefined)
+  ) {
+    console.log("enviar mensaje", cwFecha);
+    mensajeServicios();
+  } else {
+    console.log(":c", cwFecha);
+    $('button[name="cw_service_submit"]').attr("disabled", false);
+  }
+});
+
+function clearInputContacto() {
+  $("input[name='cw_nombres']").val("");
+  $("input[name='cw_apellidos']").val("");
+  $("input[name='cw_correo']").val("");
+  $("input[name='cw_telefono']").val("");
+  $("textarea[name='cw_mensaje']").val("");
+}
+function clearInputServicios() {
+  $("input[name='cwPersona']").val("");
+  $("input[name='cwEmail']").val("");
+  $("input[name='cwCelular']").val("");
+  $("input[name='cwServicio']").val("");
+  $("input[name='cwDireccion']").val("");
+  $("input[name='cwFecha']").val("");
 }

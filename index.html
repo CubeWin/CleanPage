@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" sizes="192x192" href="./assets/img/logo.png">
+    <link rel="icon" sizes="192x192" href="./assets/img/logo.png" />
     <title>Speed Clean</title>
     <meta name="og:image" content="./assets/img/alfombra.jpg" />
-    <meta name="keywords" content="Speed Clean, LIMPIEZA, CUIDADOS, DESINFECCIÓN , COVID-19" />
+    <meta
+      name="keywords"
+      content="Speed Clean, LIMPIEZA, CUIDADOS, DESINFECCIÓN , COVID-19"
+    />
     <meta name="author" content="Speed Clean" />
     <meta name="robots" content="index, follow" />
     <meta
@@ -260,7 +263,7 @@
             >
               <div
                 class="rounded-circle mt-5 cw-img-card-rounded cw-img-cover"
-                style="background-image: url(./assets/img/colchon.jpg)"
+                style="background-image: url(./assets/img/cama.jpeg)"
               ></div>
               <div class="card-body">
                 <h3 class="text-center text-primary font-weight-bold my-3">
@@ -290,7 +293,7 @@
             >
               <div
                 class="rounded-circle mt-5 cw-img-card-rounded cw-img-cover"
-                style="background-image: url(./assets/img/muebles-sillas.jpg)"
+                style="background-image: url(./assets/img/muebles.jpeg)"
               ></div>
               <div class="card-body">
                 <h3 class="text-center text-primary font-weight-bold my-3">
@@ -322,7 +325,7 @@
             >
               <div
                 class="rounded-circle mt-5 cw-img-card-rounded cw-img-cover"
-                style="background-image: url(./assets/img/alfombra.jpg)"
+                style="background-image: url(./assets/img/alfombra.jpeg)"
               ></div>
               <div class="card-body">
                 <h3 class="text-center text-primary font-weight-bold my-3">
@@ -383,7 +386,7 @@
             >
               <div
                 class="rounded-circle mt-5 cw-img-card-rounded cw-img-cover"
-                style="background-image: url(./assets/img/peluches.jpg)"
+                style="background-image: url(./assets/img/almohadas.jpeg)"
               ></div>
               <div class="card-body">
                 <h3 class="text-center text-primary font-weight-bold my-3">
@@ -415,7 +418,7 @@
             >
               <div
                 class="rounded-circle mt-5 cw-img-card-rounded cw-img-cover"
-                style="background-image: url(./assets/img/solido.jpg)"
+                style="background-image: url(./assets/img/solidos.jpeg)"
               ></div>
               <div class="card-body">
                 <h3 class="text-center text-primary font-weight-bold my-3">
@@ -431,6 +434,33 @@
               </div>
               <a
                 href="./solidas/"
+                class="btn btn-danger position-absolute cw-button-card-rounded"
+              >
+                Ver más
+              </a>
+            </div>
+          </div>
+          <div
+            class="mx-3 item d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="card d-flex align-items-center cw-card-rounded-top shadow position-relative"
+              style="min-height: 701px; max-width: 406px"
+            >
+              <div
+                class="rounded-circle mt-5 cw-img-card-rounded cw-img-cover"
+                style="background-image: url(./assets/img/oficina.jpeg)"
+              ></div>
+              <div class="card-body">
+                <h3 class="text-center text-primary font-weight-bold my-3">
+                  lavado de casas u oficina
+                </h3>
+                <p class="text-justify">
+                  --
+                </p>
+              </div>
+              <a
+                href="./casas/"
                 class="btn btn-danger position-absolute cw-button-card-rounded"
               >
                 Ver más
@@ -455,30 +485,39 @@
       <div class="row">
         <div class="col"></div>
         <div class="col-lg-5">
-          <form class="text-right" action="#" onsubmit="return false;">
+          <form class="text-right" onsubmit="return false;" autocomplete="off">
             <input
               type="text"
-              class="form-control rounded-0 mb-3 w-75 cw-bg-yellow border-0 py-2 text-waning"
+              class="form-control rounded-0 mb-3 w-75 cw-bg-yellow border-0 py-2 text-warning"
               placeholder="Nombres*"
               name="cw_nombres"
+              onkeyup="formValidateInputText(this)"
+              required
             />
             <input
               type="text"
-              class="form-control rounded-0 mb-3 w-75 cw-bg-yellow border-0 py-2 text-waning"
+              class="form-control rounded-0 mb-3 w-75 cw-bg-yellow border-0 py-2 text-warning"
               placeholder="Apellidos*"
               name="cw_apellidos"
+              onkeyup="formValidateInputText(this)"
+              required
             />
             <input
-              type="text"
-              class="form-control rounded-0 mb-3 w-75 cw-bg-yellow border-0 py-2 text-waning"
+              type="email"
+              class="form-control rounded-0 mb-3 w-75 cw-bg-yellow border-0 py-2 text-warning"
               placeholder="Correo electrónico*"
               name="cw_correo"
+              onkeyup="formValidateInputCorreo(this)"
+              required
             />
             <input
               type="text"
-              class="form-control rounded-0 mb-3 w-75 cw-bg-yellow border-0 py-2 text-waning"
+              class="form-control rounded-0 mb-3 w-75 cw-bg-yellow border-0 py-2 text-warning"
               placeholder="Número de teléfono*"
               name="cw_telefono"
+              onkeyup="formValidateInputNumber(this)"
+              maxlength="12"
+              required
             />
             <textarea
               class="form-control rounded-0 mb-3 cw-bg-yellow border-0 py-2 text-muted"
@@ -486,21 +525,30 @@
               cols="30"
               rows="10"
               style="max-height: 120px"
+              onkeyup="formValidateInputText(this)"
               name="cw_mensaje"
             ></textarea>
             <div class="row">
               <div class="col-lg-6 text-left">
-                <a class="fa-stack fa-lg text-muted" href="https://www.facebook.com/speedcleanperu" target="_blank">
+                <a
+                  class="fa-stack fa-lg text-muted"
+                  href="https://www.facebook.com/speedcleanperu"
+                  target="_blank"
+                >
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
                 </a>
-                <a class="fa-stack fa-lg text-muted" href="https://www.instagram.com/speedcleanperu/" target="_blank">
+                <a
+                  class="fa-stack fa-lg text-muted"
+                  href="https://www.instagram.com/speedcleanperu/"
+                  target="_blank"
+                >
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
                 </a>
               </div>
               <div class="col-lg-6">
-                <button type="submit" class="btn btn-primary rounded-0 px-5">
+                <button type="submit" name="cw_contact_submit" class="btn btn-primary rounded-0 px-5">
                   <i class="fa fa-send"></i> Enviar
                 </button>
               </div>
@@ -567,8 +615,12 @@
           <div
             class="col-lg-6 mb-3 d-flex align-items-center justify-content-center"
           >
-            <a href="https://www.facebook.com/speedcleanperu" target="_blank"><i class="fa fa-facebook fa-2x px-2 text-muted"></i></a>
-            <a href="https://www.instagram.com/speedcleanperu/" target="_blank"><i class="fa fa-instagram fa-2x px-2 text-muted"></i></a>
+            <a href="https://www.facebook.com/speedcleanperu" target="_blank"
+              ><i class="fa fa-facebook fa-2x px-2 text-muted"></i
+            ></a>
+            <a href="https://www.instagram.com/speedcleanperu/" target="_blank"
+              ><i class="fa fa-instagram fa-2x px-2 text-muted"></i
+            ></a>
           </div>
         </div>
       </div>
